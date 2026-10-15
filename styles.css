@@ -100,14 +100,14 @@ h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
   border-radius: 28px; padding: 1.4rem; box-shadow: var(--shadow);
 }
 .portrait {
-  aspect-ratio: 4 / 4.4; border-radius: 20px; display: grid; place-items: center;
+  aspect-ratio: 1 / 1; border-radius: 20px; display: grid; place-items: center;
   background:
     radial-gradient(circle at 30% 25%, rgba(255,255,255,.18), transparent 45%),
     linear-gradient(150deg, #2b3a5e 0%, #1f2a44 55%, #b5654a 140%);
   overflow: hidden;
 }
 .portrait span { font-family: var(--serif); font-size: clamp(4rem, 9vw, 6.5rem); color: #faf7f2; opacity: .92; letter-spacing: .02em; }
-.portrait img { width: 100%; height: 100%; object-fit: cover; }
+.portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .now { display: flex; gap: .85rem; align-items: flex-start; padding: 1.1rem .4rem .3rem; }
 .dot {
   flex: none; width: 10px; height: 10px; margin-top: .45rem; border-radius: 50%;
