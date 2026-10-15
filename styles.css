@@ -93,7 +93,12 @@ h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
 .btn.outline-light { border: 1.5px solid rgba(255, 255, 255, .35); color: #fff; }
 .btn.outline-light:hover { border-color: #fff; }
 .loc { display: flex; align-items: center; gap: .45rem; margin-top: 1.6rem; color: var(--muted); font-size: .9rem; }
+.loc { flex-wrap: wrap; }
 .loc svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.loc a:hover { color: var(--ink); }
+.loc .sep { margin: 0 .2rem; }
+.loc .phone { display: inline-flex; align-items: center; gap: .45rem; white-space: nowrap; }
+@media (max-width: 720px) { .loc .sep { display: none; } .loc .phone { flex-basis: 100%; } }
 
 .hero-card {
   position: relative; background: var(--surface); border: 1px solid var(--line);
