@@ -150,6 +150,50 @@ h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
 .card h3 { margin-bottom: .55rem; }
 .card p { font-size: .9rem; color: var(--muted); }
 
+/* FEATURED PROJECT */
+.section-head .sub { margin-top: 1rem; color: var(--muted); max-width: 60ch; }
+.project { display: grid; grid-template-columns: 1.05fr 1fr; gap: 3rem; align-items: start; }
+.mock {
+  border-radius: 16px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow);
+  background: #f6f7fb; color: #1f2a44; font-size: .72rem; position: sticky; top: 90px;
+}
+.mock-bar { display: flex; align-items: center; gap: .35rem; padding: .6rem .8rem; background: #e9ecf3; }
+.mock-bar span { width: 9px; height: 9px; border-radius: 50%; background: #c9cedb; }
+.mock-bar span:first-child { background: #e9857a; }
+.mock-bar span:nth-child(2) { background: #e9c46a; }
+.mock-bar span:nth-child(3) { background: #7fc48f; }
+.mock-bar p { margin-left: .6rem; color: #6b7083; }
+.mock-body { display: grid; grid-template-columns: 120px 1fr; min-height: 300px; }
+.mock-side { background: #1f2a44; color: #b9c0d3; padding: .9rem .7rem; display: flex; flex-direction: column; gap: .35rem; }
+.mock-side b { color: #fff; font-size: .8rem; margin-bottom: .5rem; }
+.mock-side i { font-style: normal; padding: .3rem .45rem; border-radius: 6px; }
+.mock-side i.on { background: rgba(255,255,255,.12); color: #fff; }
+.mock-main { padding: 1rem; display: flex; flex-direction: column; gap: .8rem; }
+.mock-title { font-weight: 600; font-size: .85rem; }
+.mock-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; }
+.mock-kpis div { background: #fff; border: 1px solid #e4e7ef; border-radius: 8px; padding: .5rem .6rem; }
+.mock-kpis small { display: block; color: #8e94a6; font-size: .62rem; text-transform: uppercase; letter-spacing: .05em; }
+.mock-kpis strong { font-size: 1rem; }
+.mock-kpis .ok { color: #3fae6a; } .mock-kpis .warn { color: #e0a43a; } .mock-kpis .info { color: #5b7bd5; }
+.mock-chart { display: flex; align-items: flex-end; gap: .45rem; height: 70px; background: #fff; border: 1px solid #e4e7ef; border-radius: 8px; padding: .6rem; }
+.mock-chart span { flex: 1; border-radius: 4px 4px 0 0; background: linear-gradient(#b5654a, #e0a48f); }
+.mock-flow { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
+.mock-flow em { font-style: normal; background: #fff; border: 1px solid #e4e7ef; border-radius: 999px; padding: .25rem .6rem; }
+.mock-flow em.done { background: #e5f4ea; border-color: #bfe3cb; color: #23764a; }
+.mock-flow span { color: #8e94a6; }
+
+.facts-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; margin-bottom: 1.6rem; }
+.facts-row div { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1rem; }
+.facts-row strong { display: block; font-family: var(--serif); font-size: 1.8rem; color: var(--ink); line-height: 1.1; }
+.facts-row span { font-size: .8rem; color: var(--muted); }
+.features li { position: relative; padding-left: 1.4rem; margin-bottom: .85rem; font-size: .95rem; }
+.features li::before {
+  content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent-soft); border: 2px solid var(--accent);
+}
+.features b { color: var(--ink); }
+.project .tags { margin-top: 1.4rem; }
+
 /* TIMELINE */
 .timeline { position: relative; }
 .timeline::before {
@@ -198,7 +242,8 @@ h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
 /* RESPONSIVE */
 @media (max-width: 960px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
-  .hero-grid, .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-grid, .two-col, .project { grid-template-columns: 1fr; gap: 2.5rem; }
+  .mock { position: static; }
   .hero-card { max-width: 420px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(3) { border-left: 0; }
@@ -213,5 +258,10 @@ h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
   .job::before { left: 0; }
   .when { text-align: left; }
   .stat { padding: 1.5rem 1rem; }
+  .mock-body { grid-template-columns: 1fr; }
+  .mock-side { display: none; }
+  .mock-kpis { grid-template-columns: repeat(2, 1fr); }
+  .facts-row { grid-template-columns: 1fr 1fr 1fr; gap: .5rem; }
+  .facts-row strong { font-size: 1.4rem; }
   .stat strong { font-size: 1.9rem; }
 }
