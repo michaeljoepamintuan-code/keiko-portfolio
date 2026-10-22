@@ -324,6 +324,12 @@ h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
 .item-title { font-weight: 600; color: var(--ink); }
 .item-sub { font-size: .88rem; color: var(--muted); }
 .item-note { font-size: .88rem; margin-top: .35rem; }
+.cert-photo { margin-top: .9rem; }
+.cert-photo img {
+  display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 52%;
+  border-radius: 12px; border: 1px solid var(--line);
+}
+.cert-photo figcaption { font-size: .78rem; color: var(--muted); margin-top: .45rem; }
 .badge {
   display: inline-block; vertical-align: middle; margin-left: .35rem; padding: .1rem .5rem; border-radius: 999px;
   background: var(--accent); color: #fff; font-size: .68rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
